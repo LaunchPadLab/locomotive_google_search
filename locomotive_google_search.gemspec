@@ -6,12 +6,11 @@ require 'locomotive_google_search/version'
 Gem::Specification.new do |spec|
   spec.name          = "locomotive_google_search"
   spec.version       = LocomotiveGoogleSearch::VERSION
-  spec.authors       = ["TODO: Write your name"]
+  spec.authors       = ["Ryan Francis"]
   spec.email         = ["ryan.p.francis@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{A gem for implementing Google Search in LocomotiveCMS}
+  spec.homepage      = "https://github.com/LaunchPadLab/locomotive_google_search"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
