@@ -21,7 +21,7 @@ module GoogleSearch
       end
 
       def pull_data
-        @data = Rails.env.development? ? stubbed_json : JSON.parse(open(generate_url).read)
+        @data = ENV["GOOGLE_API_KEY"].present? ? JSON.parse(open(generate_url).read) : stubbed_json
       end
 
       def start_hash
