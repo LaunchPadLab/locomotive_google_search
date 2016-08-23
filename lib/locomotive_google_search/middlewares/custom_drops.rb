@@ -1,7 +1,5 @@
-require 'locomotive_google_search/google_search/query'
-require 'locomotive_google_search/google_search/result'
-require 'locomotive_google_search/google_search/search'
-require 'locomotive_google_search/liquid/drops/results'
+require 'locomotive_google_search/google_search'
+require 'locomotive_google_search/liquid/drops/result'
 require 'locomotive_google_search/liquid/drops/search'
 
 module LocomotiveGoogleSearch

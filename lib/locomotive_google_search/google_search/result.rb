@@ -1,15 +1,19 @@
-class GoogleSearch::Result
+require 'locomotive_google_search/liquid/drops/result'
 
-  attr_reader :title, :link, :snippet
+module GoogleSearch
+  class Result
 
-  def initialize(args = {})
-    @title = args["title"]
-    @link = args["link"]
-    @snippet = args["snippet"]
+    attr_reader :title, :link, :snippet
+
+    def initialize(args = {})
+      @title = args["title"]
+      @link = args["link"]
+      @snippet = args["snippet"]
+    end
+
+    def to_liquid
+      LocomotiveGoogleSearch::Liquid::Drops::Result.new(self)
+    end
+
   end
-
-  def to_liquid
-    Shop::Liquid::Drops::Result.new(self)
-  end
-
 end

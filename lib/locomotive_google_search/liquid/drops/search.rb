@@ -24,11 +24,11 @@ module LocomotiveGoogleSearch
         end
 
         def page
-          @context.registers[:controller].params[:page] || 1
+          @context.registers[:request].params['page'].try(:to_i) || 1
         end
 
         def options
-          text = @context.registers[:controller].params[:query]
+          text = @context.registers[:request].params['query']
           { term: text, page: page }
         end
 
