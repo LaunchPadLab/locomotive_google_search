@@ -5,7 +5,6 @@ module GoogleSearch
     attr_reader :term, :start, :data, :results
 
     def initialize(args = {})
-      binding.pry
       @term = args[:term]
       @start = args[:start].try(:to_s) || "1"
       pull_data
