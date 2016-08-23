@@ -23,11 +23,17 @@ module LocomotiveGoogleSearch
           self.collection.each_with_index(&block)
         end
 
+        def request
+          @context.registers[:request]
+        end
+
         def page
-          @context.registers[:request].params['page'].try(:to_i) || 1
+          return 1 unless request.present?
+          request.params['page'].try(:to_i) || 1
         end
 
         def options
+          return nil unless request.present?
           text = @context.registers[:request].params['query']
           { term: text, page: page }
         end
